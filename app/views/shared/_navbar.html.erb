@@ -1,0 +1,25 @@
+<div class="navbar-wagon">
+  <!-- Logo -->
+  <div class="navbar-wagon-brand">
+    <img src="https://cocktailmania.herokuapp.com/assets/cocktail-glass-a373aaa61e1f19a5b522ba0e9e6d517fa99a04c49b3ac1c417bcf1ef9d509573.png" alt="logo">
+    <h1 class="navbar-wagon-item-left">Mister Cocktail</h1>
+  </div>
+
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+    <%= link_to "All my cocktails", cocktails_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "Create a new cocktail", new_cocktail_path, class: "navbar-wagon-item navbar-wagon-link" %>
+
+    <!-- Profile picture with dropdown list -->
+    <div class="navbar-wagon-item">
+      <div class="dropdown">
+        <img src="https://avatars0.githubusercontent.com/u/45844158?s=400&u=ae0d7043957fbd5e0f24fb6421c060ad92543e0b&v=4" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Log Out</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

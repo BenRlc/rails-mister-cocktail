@@ -1,7 +1,7 @@
 /* Main navbar */
 .navbar-wagon {
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  background: white;
+  background: #0a1e2b;
   transition: all 0.3s ease;
   height: 70px;
   padding: 0px 30px;
@@ -11,15 +11,25 @@
 }
 
 /* Logo */
+.navbar-wagon-brand {
+  display: flex;
+  align-items: center;
+}
 .navbar-wagon-brand img {
   height: 50px;
+}
+.navbar-wagon-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* User Avatar */
 .navbar-wagon .avatar {
-  height: 35px;
-  width: 35px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
+
 }
 
 /* Right section */
@@ -33,16 +43,27 @@
 .navbar-wagon-item {
   cursor: pointer;
   padding: 0 20px;
+  color: #ffffff;
+  font-style: italic;
+  font-size: 60px;
+}
+.navbar-wagon-item-left {
+  font-family: "Raleway", "Helvetica", "sans-serif";
+  cursor: pointer;
+  padding: 0 20px;
+  color: #dab475;
+  font-style: bold;
+  padding-bottom: 10px;
 }
 
 /* Navbar link */
 .navbar-wagon-link {
-  color: #616668;
+  color: #ffffff;
   font-size: 14px;
 }
 .navbar-wagon-link:hover {
-  color: #da552f;
-  text-decoration: none;
+  color: #dab475;
+  text-decoration: underline;
 }
 
 /* Dropdown menu */
@@ -74,4 +95,7 @@
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+}
+.avatar {
+  vertical-align: baseline;
 }

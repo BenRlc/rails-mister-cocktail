@@ -1,12 +1,48 @@
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://www.rhumeriedechamarel.com/wp-content/uploads/2015/04/the-cocktails-slider1.jpg');">
+  <div class="banner-content">
+    <h1>Welcome to Mister Cocktail</h1>
+    <p>Your mixology best-friend</p>
+    <a href="#card" class="btn btn-primary btn-lg btn-gold">Let's shake!</a>
+  </div>
+</div>
+
 <div class="container">
-  <h1>Welcome to Mister Cocktail</h1>
-  <h2>Your mixology best-friend</h2>
-  <br>
-  <ul>
-      <% @cocktails.each do |cocktail| %>
-        <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <% if cocktail.photo.present? %>
+        <div class="col-xs-12 col-sm-4">
+          <%= link_to cocktail_path(cocktail) do %>
+            <div class="card" id="card"style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>');">
+              <div class="card-description">
+                <%= link_to cocktail.name, cocktail_path(cocktail) %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      <% else %>
+        <div class="col-xs-12 col-sm-4">
+          <%= link_to cocktail_path(cocktail) do %>
+            <div class="card" id="card"style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>');">
+              <div class="card-description">
+                <%= link_to cocktail.name, cocktail_path(cocktail) %>
+              </div>
+            </div>
+          <% end %>
+        </div>
       <% end %>
-  </ul>
-  <br>
-  <i class="fas fa-plus-circle"></i> <%= link_to "Create a new cocktail", new_cocktail_path %>
+    <% end %>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    Alcohol abuse is bad for your health - Drink safely
+  </div>
 </div>

@@ -14,6 +14,14 @@
 <div class="container">
   <%= link_to "Add ingredients", new_dose_path(@cocktail), class: "link-add" %>
 </div>
+<div class="container">
+  <%= link_to "Delete cocktail", cocktails_path, method: :delete,
+      data: { confirm: "Are you sure?" } do %>
+      <i class="fas fa-trash-alt"></i>
+      <% end %>
+</div>
+
 <div class="container link-back">
   <%= link_to "Back to list", cocktails_path, class: "link-back" %>
 </div>
+

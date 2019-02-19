@@ -14,7 +14,7 @@
           <%= link_to cocktail_path(cocktail) do %>
             <div class="card" id="card"style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>');">
               <div class="card-description">
-                <%= link_to cocktail.name, cocktail_path(cocktail) %>
+                <%= link_to cocktail.name, cocktail_path(cocktail), class: "card-link" %>
               </div>
             </div>
           <% end %>
@@ -24,7 +24,7 @@
           <%= link_to cocktail_path(cocktail) do %>
             <div class="card" id="card"style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://res.cloudinary.com/dwzpc9beh/image/upload/v1550244550/cocktail_by_default.jpg');">
               <div class="card-description">
-                <%= link_to cocktail.name, cocktail_path(cocktail) %>
+                <%= link_to cocktail.name, cocktail_path(cocktail), class: "card-link" %>
               </div>
             </div>
           <% end %>

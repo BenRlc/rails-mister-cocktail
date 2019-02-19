@@ -1,5 +1,5 @@
 <div class="container">
-  <h1> <%= @cocktail.name %></h1>
+  <h1> <%= @cocktail.name %> </h1>
   <ul>
     <% @cocktail.doses.each do |dose| %>
 
@@ -14,14 +14,12 @@
 <div class="container">
   <%= link_to "Add ingredients", new_dose_path(@cocktail), class: "link-add" %>
 </div>
-<div class="container">
-  <%= link_to "Delete cocktail", cocktails_path, method: :delete,
-      data: { confirm: "Are you sure?" } do %>
-      <i class="fas fa-trash-alt"></i>
-      <% end %>
+<div class="container link-delete">
+  <%= link_to "Delete cocktail", cocktail_path(@cocktail), class: "link-delete", method: :delete,
+      data: { confirm: "Are you sure?" } %>
 </div>
 
-<div class="container link-back">
+<div class="container">
   <%= link_to "Back to list", cocktails_path, class: "link-back" %>
 </div>
 
